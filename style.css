@@ -6,7 +6,8 @@
 }
 
 :root {
-    --color-font: #8c8e8f;
+    --color-font: #ececec;
+    --color-font-copyright: #8c8e8f;
 }
 
 body {
@@ -19,7 +20,6 @@ body {
 }
 
 .main {
-    background-color: white;
     width: 100%;
     height: 100%;
 
@@ -31,29 +31,88 @@ body {
 
     height: 100%;
     width: 100%;
-    max-width: 30rem;
-    min-width: 30rem;
+    max-width: 31rem;
+    min-width: 25rem;
 
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 
     padding: 2rem;
 }
 
 .main__logo-container {
     width: 8rem;
+    margin-bottom: 2rem;
 }
 
 .main__logo {
     width: 100%;
 }
 
-.main__copyright {
+.main__workouts {
+    width: 90%;
+    height: 100%;
+
+    margin: 1rem;
+}
+
+.workout {
+    background-color: #42484d;
+    padding: 1rem;
+    border-radius: 6px;
+
+    margin-bottom: 1.2rem;
+}
+
+.workout__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.form__inputs {
+    margin: .3rem .5rem;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.form__input {
+    max-width: 5rem;
+    flex-basis: 5rem;
+    border: none;
+    padding: .3rem;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 930px) {
+    .form__inputs {
+        display: block;
+    }
+    .form__label {
+        margin-bottom: .3rem;
+        display: block;
+    }
+    .form__input {
+        display: block;
+    }
+}
+
+.form__label {
     color: var(--color-font);
+}
+
+.main__copyright {
+    color: var(--color-font-copyright);
     font-size: .8rem;
     text-align: center;
+
+    margin-top: auto;
 }
 
 .main__map {
