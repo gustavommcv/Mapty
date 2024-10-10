@@ -65,10 +65,15 @@ body {
 }
 
 .main__workouts {
-    width: 90%;
+    width: 95%;
     height: 100%;
 
     margin: 1rem;
+
+    list-style: none;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .workout {
@@ -78,7 +83,27 @@ body {
 
     margin-bottom: 1.2rem;
 
-    transition: opacity .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+.aworkout {
+    background-color: #42484d;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    transition: all .3s ease-out;
+}
+
+.workout--running {
+    border-left: 5px solid var(--color-brand--2);
+}
+.workout--cycling {
+    border-left: 5px solid var(--color-brand--1);
 }
 
 .workout__form {
@@ -88,6 +113,41 @@ body {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
+
+.workout__title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    grid-column: 1 / -1;
+    color: var(--color-font);
+  }
+  
+  .workout__details {
+    display: flex;
+    flex-direction: row;
+
+    :not(:last-child) {
+        margin-right: .9rem;
+    }
+  }
+
+  .workout__icon {
+    font-size: 1.1rem;
+    margin-right: 0.1rem !important;
+    height: 0.28rem;
+  }
+  
+  .workout__value {
+    font-size: 1rem;
+    margin-right: 0rem !important;
+    color: var(--color-font);
+  }
+  
+  .workout__unit {
+    font-size: .7rem;
+    color: var(--color-light--1);
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
 .form__inputs {
     margin: .3rem .5rem;
